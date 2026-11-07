@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  --font-caveat: 'Caveat', cursive;
+  --font-hand: 'Patrick Hand', cursive;
+  --font-gaegu: 'Gaegu', cursive;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+  --color-paper: #FAF7F2;
+  --color-paper-card: #FFFDF9;
+  --color-ink: #2B2523;
+  --color-ink-muted: #6B615B;
+  --color-doodle-red: #E64A4A;
+  --color-doodle-pink: #FF9EAA;
+  --color-doodle-yellow: #FFE882;
+  --color-doodle-blue: #97CBA9;
+  --color-doodle-purple: #D5B4F0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FAF7F2;
+  color: #2B2523;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-image: radial-gradient(#E8E0D5 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+/* Hand-drawn wobbly borders */
+.doodle-border {
+  border: 2.5px solid #2B2523;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+.doodle-border-sm {
+  border: 2px solid #2B2523;
+  border-radius: 200px 10px 190px 12px/12px 190px 10px 200px;
+}
+
+.doodle-border-alt {
+  border: 2.5px solid #2B2523;
+  border-radius: 20px 250px 15px 240px/240px 18px 230px 15px;
+}
+
+/* Hand-drawn solid shadows */
+.doodle-shadow {
+  box-shadow: 4px 5px 0px #2B2523;
+}
+
+.doodle-shadow-sm {
+  box-shadow: 2.5px 3px 0px #2B2523;
+}
+
+.doodle-shadow-lg {
+  box-shadow: 6px 8px 0px #2B2523;
+}
+
+/* Wobbly button press */
+.doodle-btn {
+  transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  user-select: none;
+}
+
+.doodle-btn:hover {
+  transform: translateY(-2px);
+}
+
+.doodle-btn:active {
+  transform: translate(2px, 3px);
+  box-shadow: 1px 1px 0px #2B2523 !important;
+}
+
+/* Washi tape header snippet */
+.washi-tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1.5deg);
+  width: 90px;
+  height: 24px;
+  background-color: rgba(255, 232, 130, 0.85);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-left: 2px dashed rgba(43, 37, 35, 0.3);
+  border-right: 2px dashed rgba(43, 37, 35, 0.3);
+  z-index: 20;
+}
+
+.washi-tape-pink {
+  background-color: rgba(255, 158, 170, 0.85);
+}
+
+.washi-tape-blue {
+  background-color: rgba(151, 203, 169, 0.85);
+}
+
+/* 3D Card flip container */
+.perspective-1000 {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8CEBE;
+  border-radius: 999px;
+  border: 2px solid #FAF7F2;
+}
